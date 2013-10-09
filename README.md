@@ -1,5 +1,4 @@
-unfurl
-======
+#unfurl
 
 Simple python library to unravel/unfurl shortened links using link shortners such as:
 * bit.ly
@@ -11,8 +10,8 @@ Simple python library to unravel/unfurl shortened links using link shortners suc
 
 Supports internationalized domains as well.
 
-Usage:
-```
+## Usage:
+```python
 import unfurl
 unfurl.expand_url("http://j.mp/Y4seGv")
 ```
