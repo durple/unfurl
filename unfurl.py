@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import urllib2
 import cookielib
 from urlparse import urlparse
@@ -23,11 +22,3 @@ def expand_url(url):
 	opened_url = opener.open(parsed_url)
 	resolved_url = opened_url.geturl()
 	return resolved_url
-
-if __name__ == "__main__":
-   print expand_url("http://j.mp/Y4seGv")
-   print expand_url("http://t.co/bxPFQgZ1AV")
-   print expand_url(u"http://➡.ws/kd")
-   print expand_url(u"http://➡.ws/wwwwwwwww")
-   print expand_url("qq")
-   print expand_url("http://j.mp/13ND7TO")
