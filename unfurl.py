@@ -24,7 +24,6 @@ def expand_url(url):
 	#open url
 	opened_url = opener.open(parsed_url)
 	resolved_url = opened_url.geturl()
-	#print cookiejar
 	return resolved_url
 
 
@@ -36,11 +35,7 @@ def expand_url_with_hops(url, hops = [], headers = None):
     h.follow_redirects = False
     response, content = h.request(url, 'HEAD', headers)
     if response.has_key('set-cookie'):
-    	#if headers is None:
     	headers = json.dumps({'Cookie': response['set-cookie']})
-    	#else:
-    	#	headers += " "+response['set-cookie']
-    #print headers+"\n"
     if response.status/100 == 3 and response['location']:
     	redirected_url = response['location']
     	hops.append(redirected_url)
